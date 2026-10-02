@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  --color-brand-primary: #F2861D;
+  --color-brand-primary-hover: #D9740F;
+  --color-brand-bg: #FAF6EF;
+  --color-brand-surface: #FFFFFF;
+  --color-brand-text: #1A1A1A;
+  --color-brand-muted: #6B6B6B;
+  --color-brand-border: #EAE4D8;
+  --color-brand-admin-bg: #2A1E14;
+}
+
+body {
+  @apply text-[#1A1A1A] bg-[#FAF6EF] font-sans antialiased selection:bg-[#F2861D] selection:text-white;
+}
+
+.heading-display {
+  @apply font-sans tracking-tight;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #FAF6EF;
+}
+
+/* Global Interactive Focus Rings & Touch Target Discipline */
+button, a, select, textarea {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F2861D] focus-visible:ring-offset-2;
+}
+
+input {
+  @apply outline-none focus:outline-none focus-visible:outline-none;
+}
+
+/* Scroll margin offset for sticky headers */
+.prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  scroll-margin-top: 100px;
+}
+
+/* Sleek subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(107, 114, 128, 0.6);
+}
+
+.glass-card {
+  @apply bg-white/95 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.04)];
+}
+
+.prose table {
+  @apply border-collapse table-auto w-full my-8 text-sm text-left overflow-hidden rounded-2xl bg-white shadow-xs;
+}
+
+.prose table th {
+  @apply bg-black/[0.03] font-bold p-4 text-[#1A1A1A];
+}
+
+.prose table td {
+  @apply p-4 border-b border-black/[0.04];
+}
+
+.prose table p {
+  @apply m-0;
+}
+
+.prose img {
+  @apply rounded-2xl shadow-sm;
+}
+
+.prose hr {
+  @apply my-12 border-0 h-px bg-black/[0.06];
+}
+
+.prose blockquote {
+  @apply border-l-[3px] border-[#F2861D] bg-black/[0.02] py-4 px-6 rounded-r-2xl not-italic font-medium text-[#1A1A1A];
+}
+

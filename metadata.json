@@ -1,0 +1,8 @@
+{
+  "name": "Bitlance Blog Hub",
+  "description": "Premium Blog & Resources hub for Bitlance - optimized for SEO, AI search, and conversion.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
